@@ -1,9 +1,20 @@
 .nav {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  transition: transform 0.3s ease;
+}
+
+.hidden {
+  transform: translateY(-200%);
 }
 .nav__container {
   width: 100%;
@@ -11,4 +22,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+  .nav__container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    margin-top: 0;
+  }
 }
