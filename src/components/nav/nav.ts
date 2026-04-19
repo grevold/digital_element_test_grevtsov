@@ -5,13 +5,19 @@ import { Logo } from "../../assets/logo/Logo";
 /**
  *
  */
-export const Nav = () => {
-  const logo = document.querySelector(".logo");
-  if (logo) {
-    logo.innerHTML = Logo;
+export class Nav {
+
+  private logo: HTMLElement;
+
+  private menu: HTMLElement;
+
+  constructor() {
+    this.logo = document.querySelector(".logo") as HTMLElement;
+    this.menu = document.querySelector(".menu") as HTMLElement;
+
+    this.logo.innerHTML = Logo;
+    this.menu.innerHTML = MenuBurger;
   }
-  const menu = document.querySelector(".menu");
-  if (menu) {
-    menu.innerHTML = MenuBurger;
-  }
-};
+
+  
+}
