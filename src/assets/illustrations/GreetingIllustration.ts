@@ -1,4 +1,13 @@
-export const GreetingIllustration = `<svg width="688" height="623" viewBox="0 0 688 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+interface IProps {
+  width: number;
+  height: number;
+}
+
+/**
+ *
+ */
+export const GreetingIllustration = ({ width, height }: IProps) => {
+  const svg = `<svg width="${width}" height="${height}" viewBox="0 0 688 623" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M624.23 74.6537C479.455 5.76104 415.592 194.153 315.762 225.15C216.017 270.497 119.839 217.419 60.4517 262.918C-33.683 335.038 7.6338 461.207 67.8971 514.294C154.318 590.423 307.895 563.023 466.635 480.706C665.518 377.572 751.174 135.061 624.23 74.6537Z" fill="#98C3E8"/>
 <path opacity="0.2" d="M143.123 149.744C148.123 162.244 133.123 181.744 111.623 188.244C93.1227 193.837 75.1227 193.244 70.1227 180.244C65.6996 168.744 79.6227 156.244 95.6227 149.744C111.623 143.244 138.123 137.244 143.123 149.744Z" fill="#98C3E8"/>
 <path opacity="0.2" d="M306.623 124.244C302.732 114.304 316.439 91.1094 333.425 86.0421C348.041 81.6819 361.734 71.4072 365.623 81.7436C369.063 90.8872 358.531 111.568 345.883 116.659C333.235 121.749 310.514 134.183 306.623 124.244Z" fill="#98C3E8"/>
@@ -194,3 +203,7 @@ export const GreetingIllustration = `<svg width="688" height="623" viewBox="0 0 
 </defs>
 </svg>
 `;
+  return svg;
+};
+
+// width="688" height="623"
