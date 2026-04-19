@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 700px;
-  color:white
+  color: white;
 }
 
 .clients__bg__decoration {
@@ -84,4 +84,61 @@
 .clients__list li h4 {
   color: white;
   font-weight: 300;
+}
+
+@media (max-width: 1040px) {
+  .clients {
+    height: 900px;
+  }
+  .clients__header__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
+  .clients__header__container h2 {
+    text-align: center;
+    max-width: 350px;
+  }
+  .clients__header__container p {
+    text-align: center;
+  }
+  .clients__container {
+    margin-top: 0;
+    justify-content: start;
+    align-items: center;
+  }
+  .clients__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 473px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .clients {
+    height: 1500px;
+  }
+  .clients__list {
+    max-width: 360px;
+    background: none;
+  }
+  .clients__list li {
+    border-bottom: 1px solid white;
+  }
+
+  .clients__header__container h2 {
+    font-size: 28px;
+  }
+  .clients__header__container p {
+    max-width: 360px;
+  }
+  .clients__container{
+    margin-bottom: 0;
+
+  }
 }

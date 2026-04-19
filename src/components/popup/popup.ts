@@ -1,3 +1,4 @@
+import { Button } from "../buttons/button";
 import "./popup.css";
 
 interface IPopupOptions {
@@ -20,6 +21,8 @@ export class Popup {
 
   private isSuccess: boolean;
 
+  private closeButton: Button;
+
   constructor(options: IPopupOptions) {
     this.isSuccess = options.isSuccess;
     this.popup = document.querySelector(".popup") as HTMLElement;
@@ -29,6 +32,15 @@ export class Popup {
     this.popup_text = document.querySelector("#popup__text") as HTMLSpanElement;
     this.popup_bg = document.querySelector("#popup__bg") as HTMLElement;
     this.popup_bg.addEventListener("click", () => this.closePopup());
+
+    this.closeButton = new Button({
+      text: "ОК",
+      id: "open_modal_button_footer",
+      variant: "primary",
+      onClick: () => this.closePopup(),
+    });
+
+    this.popup_container.appendChild(this.closeButton.getElement());
 
     if (this.popup_container) {
       this.init(options);
@@ -46,7 +58,6 @@ export class Popup {
       this.popup_text.textContent = "";
       this.popup_text.classList.add("reject_text");
       this.popup_text.textContent = options.text;
-
     }
   }
 
