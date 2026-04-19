@@ -1,20 +1,41 @@
 import "./header.css";
 import { GreetingIllustration } from "../../assets/illustrations/GreetingIllustration";
+import { Button } from "../buttons/button";
 
 /**
  *
  */
-export const Header = () => {
-  const button = document.querySelector("#CTA_button");
-  if (button) {
-    button.addEventListener("click", () => {
-      alert("Нажали на кнопку ");
+export class Header {
+
+  private header: HTMLElement;
+
+  private ctaButton: Button;
+
+  private header_container_greeting: HTMLElement;
+
+  private header_container_greeting_image: HTMLElement;
+
+  constructor() {
+    this.header = document.querySelector(".header") as HTMLElement;
+    this.header_container_greeting = document.querySelector(
+      ".header__container__greeting"
+    ) as HTMLElement;
+    this.header_container_greeting_image = document.querySelector(
+      ".header__container__greeting__image"
+    ) as HTMLElement;
+    this.header_container_greeting_image.innerHTML = GreetingIllustration;
+
+    this.ctaButton = new Button({
+      text: "See Our Project",
+      id: "open_modal_button_header",
+      variant: "primary",
     });
+
+    this.header_container_greeting.appendChild(this.ctaButton.getElement());
   }
-  const illustration = document.querySelector(
-    ".header__container__greeting__image"
-  );
-  if (illustration) {
-    illustration.innerHTML = GreetingIllustration;
+
+  public getElement(): HTMLElement {
+    return this.header;
   }
-};
+
+}

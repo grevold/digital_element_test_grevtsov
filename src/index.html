@@ -25,11 +25,6 @@
       href="https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Light.css"
       rel="stylesheet"
     />
-    <!--or github raw-->
-    <link
-      href="raw.githubusercontent.com/repalash/gilroy-free-webfont/fonts/Gilroy-Light.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <!-- header -->
@@ -51,18 +46,122 @@
             tristique vulputate ultrices ut mauris tellus at. Posuere
             sollicitudin odio tellus elit.
           </p>
-          <button class="btn btn__primary" type="button" id="CTA_button">
-            See Our Project
-          </button>
         </div>
         <div class="header__container__greeting__image"></div>
       </div>
     </header>
-    <main></main>
+
     <footer class="footer">
-      <div class="content">
-        <p>2019 © Afrianska. All rights reserved.</p>
+      <div class="footer__container">
+        <div class="footer__content__container">
+          <div class="footer__content__container__cta__block">
+            <div class="cta_text_container">
+              <h3>Intersted to work with our team?</h3>
+              <span
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam.</span
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="footer__contacts__container">
+            <div class="footer__contacts">
+              <div class="logo__reverse__container">
+                <div class="logo__reverse" id="logo__reverse"></div>
+                <span>Afrianska</span>
+              </div>
+              <ul class="contacts_list">
+                <li>
+                  <div class="bullet__litera">A.</div>
+                  <span
+                    >Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.</span
+                  >
+                </li>
+                <li>
+                  <div class="bullet__litera">T.</div>
+                  <span>+62-812-7313-4321</span>
+                </li>
+                <li>
+                  <div class="bullet__litera">E.</div>
+                  <span>hello.afrian@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content__container__nav__block">
+              <div class="footer__nav">
+                <h3>About US</h3>
+                <ul class="list">
+                  <li>About</li>
+                  <li>What We Do</li>
+                  <li>Project</li>
+                  <li>How It Work With Us</li>
+                </ul>
+              </div>
+              <div class="footer__nav">
+                <h3>Follow US</h3>
+                <ul class="list">
+                  <li>Instagram</li>
+                  <li>Facebook</li>
+                  <li>Linkedin</li>
+                  <li>YouTube</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rights">
+            <p>2019 © Afrianska. All rights reserved.</p>
+          </div>
+        </div>
       </div>
+      <div class="footer__bg__decoration"></div>
     </footer>
+
+    <dialog class="modal hidden">
+      <div class="modal__bg" id="modal__bg"></div>
+      <form class="form">
+        <div class="close_container"></div>
+        <h2>SEND US MESSAGE</h2>
+        <div class="input__container">
+          <label>Full Name</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Name"
+            id="name"
+            name="name"
+          />
+          <span class="error" id="nameError"></span>
+        </div>
+        <div class="input__container">
+          <label>Email</label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Email"
+            id="email"
+            name="email"
+          />
+          <span class="error" id="emailError"></span>
+        </div>
+        <div class="input__container">
+          <label>Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            class="input text_area"
+          ></textarea>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="popup hidden">
+      <div class="popup__bg" id="popup__bg"></div>
+      <div class="popup__container__content">
+        <span class="popup__text" id="popup__text"></span>
+      </div>
+    </dialog>
   </body>
 </html>
