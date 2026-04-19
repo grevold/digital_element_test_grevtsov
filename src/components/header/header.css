@@ -41,7 +41,7 @@
 
 .header__container__greeting__image {
   position: absolute;
-  top: 90px;
+  top: 10px;
   right: 30px;
 }
 
@@ -59,7 +59,7 @@
     margin-left: 112px;
   }
   .header__container__greeting__image {
-    top: 200px;
+    top: 20px;
   }
 }
 
@@ -68,7 +68,7 @@
     justify-content: start;
   }
   .header__container__greeting__image {
-    top: 250px;
+    top: 140px;
   }
 }
 
@@ -83,7 +83,7 @@
     margin-left: 50px;
   }
   .header__container__greeting__image {
-    top: 280px;
+    top: 170px;
   }
 }
 

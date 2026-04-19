@@ -24,8 +24,10 @@ export class Header {
     this.header_container_greeting_image = document.querySelector(
       ".header__container__greeting__image"
     ) as HTMLElement;
-    
-    this.header_container_greeting_image.innerHTML = GreetingIllustration(GreetingIllustrationWidthAndHeight());
+
+    this.header_container_greeting_image.innerHTML = GreetingIllustration(
+      GreetingIllustrationWidthAndHeight()
+    );
 
     this.ctaButton = new Button({
       text: "See Our Project",
